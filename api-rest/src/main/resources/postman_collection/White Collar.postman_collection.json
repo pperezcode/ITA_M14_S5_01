@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "419625ae-b810-43c4-95bf-94eeb28f86b3",
+		"name": "White Collar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear botiga amb 'nomBotiga' i 'capacitat' (POST /shops/)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomBotiga\": \"Art 9\",\r\n    \"capacitat\": 70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shops/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shops",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Llistar botigues amb 'nom' i 'capacitat' (GET /shops/)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shops/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shops",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Afegir quadre a botiga amb 'nomQuadre', 'nomAutor' i 'preu' (POST /shops/{ID}/pictures)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomQuadre\": \"La Gioconda\",\r\n    \"nomAutor\": \"Leonardo da Vinci\",\r\n    \"preu\": 28500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shops/5/pictures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shops",
+						"5",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Llistar quadres per botiga (GET /shops/{ID}/pictures)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shops/1/pictures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shops",
+						"1",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incendiar quadres: eliminar quadres botiga (DELETE /shops/{ID}/pictures)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shops/1/pictures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shops",
+						"1",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
